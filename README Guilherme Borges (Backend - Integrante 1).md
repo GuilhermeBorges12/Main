@@ -67,3 +67,13 @@ cd ../frontend
 echo VITE_API_URL=http://localhost:4000 > .env
 npm i
 npm run dev
+
+📌 COMMITS RELEVANTES (EXEMPLOS)
+
+feat(products): CRUD, paginação, busca, filtros e ordenação
+
+feat(server): boot do express, CORS e wiring das rotas
+
+feat(upload): servir /uploads e criar uploadRoutes
+
+chore(seed): admin/cliente e produtos de exemplo
