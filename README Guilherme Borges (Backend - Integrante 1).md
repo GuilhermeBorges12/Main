@@ -1,4 +1,4 @@
-# NEXUSCART — MEU TRABALHO (INTEGRANTE 1 • BACK-END: CORE & PRODUTOS)
+# NEXUSCART — MEU TRABALHO (INTEGRANTE 1 • BACK-END: CORE & PRODUTOS) Guilherme Borges Rocha
 
 Aplicação e-commerce Full-Stack (MERN) com cadastro/login, vitrine, carrinho e pedidos.  
 **Stack:** Node.js/Express 5, MongoDB/Mongoose, JWT/Bcrypt, React + Vite, Axios.
@@ -48,6 +48,14 @@ GET /api/products/categories/all
 
 ---
 
+## 📌 COMMITS RELEVANTES (EXEMPLOS)
+
+- `feat(products): CRUD, paginação, busca, filtros e ordenação`
+- `feat(server): boot do express, CORS e wiring das rotas`
+- `feat(upload): servir /uploads e criar uploadRoutes`
+- `chore(seed): admin/cliente e produtos de exemplo`
+
+
 ## 🛠️ COMO RODAR LOCALMENTE
 
 > Requisitos: **Node 20.19+** (ou 22.12+) e **MongoDB Atlas**.
@@ -69,9 +77,3 @@ npm i
 npm run dev
 
 ---
-## 📌 COMMITS RELEVANTES (EXEMPLOS)
-
-- `feat(products): CRUD, paginação, busca, filtros e ordenação`
-- `feat(server): boot do express, CORS e wiring das rotas`
-- `feat(upload): servir /uploads e criar uploadRoutes`
-- `chore(seed): admin/cliente e produtos de exemplo`
