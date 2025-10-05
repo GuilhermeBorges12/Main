@@ -1,0 +1,72 @@
+NexusCart — Meu Trabalho (Integrante 1 • Back-end: Core & Produtos)
+
+Aplicação e-commerce Full-Stack (MERN) com cadastro/login, vitrine, carrinho e pedidos.
+Stack: Node.js/Express 5, MongoDB/Mongoose, JWT/Bcrypt, React + Vite, Axios.
+
+Minha Contribuição (exclusiva — Integrante 1)
+
+Escopo: infraestrutura do back-end e domínio Produtos.
+
+
+*O que eu fiz*
+
+Boot do servidor: configuração do Express 5, CORS, express.json() e rotas base.
+
+Conexão MongoDB Atlas: módulo config/db.js com mongoose.connect.
+
+Modelo de Produto (models/Product.js) com campos:
+name, description, price, stock, categories[], images[], isActive, timestamps.
+
+API de Produtos (routes/productRoutes.js):
+
+POST /api/products — cria produto.
+
+GET /api/products — listagem com paginação, busca (q), categoria, faixa de preço e ordenação (?sort=price|-price|createdAt|-createdAt).
+
+GET /api/products/:id — detalhe.
+
+PUT /api/products/:id — atualização com validações.
+
+PATCH /api/products/:id/stock — ajuste de estoque (delta).
+
+DELETE /api/products/:id — soft delete (isActive=false).
+
+PATCH /api/products/:id/restore — restaura.
+
+GET /api/products/categories/all — lista de categorias únicas (apoia filtros do front).
+
+Integração no server.js: app.use('/api/products', productRoutes).
+
+Upload de imagens (opcional do dia 3/4): uploadRoutes.js + app.use('/uploads', express.static(...)).
+
+Seed de dados (dia 4): src/seeds/seed.js para criar admin, usuário e produtos exemplo.
+
+
+Como minha parte se integra ao projeto
+
+O Front (Integrantes 3 e 4) consome:
+
+Vitrine/listagem com busca, ordenação e categorias.
+
+Detalhe de produto.
+
+Botões “Adicionar ao carrinho” usam o _id vindo daqui.
+
+O Integrante 2 (Users & Orders) usa:
+
+Estoque e preço consolidados no momento do pedido.
+
+Ajuste de estoque após pagamento/cancelamento.
+
+COMO RODAR MEU BACK
+
+cd backend
+cp .env.example .env   # ajustar MONGO_URI, JWT_SECRET etc.
+npm i
+npm run dev            # ou: node src/server.js
+
+# (opcional) popular dados
+npm run seed
+
+
+Boas práticas: .env (não versionado), JWT_SECRET, CORS_ORIGIN, UPLOAD_DIR.
